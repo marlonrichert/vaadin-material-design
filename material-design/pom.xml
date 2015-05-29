@@ -6,7 +6,7 @@
 	<artifactId>material-design</artifactId>
 	<packaging>jar</packaging>
 	<version>0.1-SNAPSHOT</version>
-	<name>MyComponent Add-on</name>
+	<name>Material Design add-on for Vaadin 7</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,12 +22,12 @@
 		<Vaadin-Addon>${artifactId}-${project.version}.jar</Vaadin-Addon>
 	</properties>
 
-    <!--     
+    <!--
 	<organization>
 		<name>My Name</name>
 		<url>https://github.com/mygithubaccount/MyComponent/</url>
 	</organization>
-    
+
 	<scm>
 		<url>git://github.com/mygithubaccount/MyComponent.git</url>
 		<connection>scm:git:git://github.com/mygithubaccount/MyComponent.git</connection>
@@ -91,7 +91,7 @@
 			<version>${vaadin.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- This can be replaced with TestNG or some other test framework supported by the surefire plugin -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -129,12 +129,11 @@
 							<!-- Package format version - do not change -->
 							<Vaadin-Package-Version>1</Vaadin-Package-Version>
 							<Vaadin-License-Title>${Vaadin-License-Title}</Vaadin-License-Title>
-							<Vaadin-Widgetsets>org.vaadin.WidgetSet</Vaadin-Widgetsets>
 						</manifestEntries>
 					</archive>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
@@ -191,7 +190,7 @@
 			</plugin>
 		</plugins>
 
-		<!-- This is needed for the sources required by the client-side compiler to be 
+		<!-- This is needed for the sources required by the client-side compiler to be
 			included in the produced JARs -->
 		<resources>
 			<resource>
@@ -204,7 +203,7 @@
 				<directory>src/main/resources</directory>
 			</resource>
 		</resources>
-		
+
 	</build>
 
 </project>

@@ -1,6 +1,6 @@
 # Material Design theme for Vaadin 7
 
-MyComponent is an UI component add-on for Vaadin 7.
+MyComponent is a theme add-on for Vaadin 7.
 
 ## Online demo
 
