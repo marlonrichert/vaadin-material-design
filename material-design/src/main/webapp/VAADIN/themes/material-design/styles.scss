@@ -1,16 +1,26 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,300,400);
+
 @import "modules/color-constants";
 
-$md-color-app-bar: $md-COLOR-APP-BAR-LIGHT !default;
-$md-color-background: $md-COLOR-BACKGROUND-LIGHT !default;
-$md-color-cards: $md-COLOR-CARDS-LIGHT !default;
+$md-color_app-bar: $md-color_APP-BAR-LIGHT !default;
+$md-color_background: $md-color_BACKGROUND-LIGHT !default;
+$md-color_cards: $md-color_CARDS-LIGHT !default;
 
-$md-component-grid: 8px;
+$md-size_component-grid: 8px !default;
+
+@mixin box-sizing($value) {
+  -webkit-box-sizing: $value;
+  -moz-box-sizing: $value;
+  box-sizing: $value;
+}
 
 .material-design {
 
   &.v-app {
     height: 100%;
-    background: $md-color-background;
+    background: $md-color_background;
+    font-family: Roboto, sans-serif;
+    font-size: 13px;
   }
 
   &.v-overlay-container {
@@ -19,6 +29,19 @@ $md-component-grid: 8px;
   }
 
   .v-loading-indicator {
-    height: $md-component-grid;
+    height: $md-size_component-grid;
+  }
+
+  button {
+    @include box-sizing(border-box);
+    margin: 0 $md-size_component-grid;
+    min-width: 8 * $md-size_component-grid;
+    height: 4.5 * $md-size_component-grid;
+    border: none;
+    padding: 0 $md-size_component-grid;
+
+    background: $md-color_cards;
+    font-size: 14px;
+    text-transform: uppercase;
   }
 }
