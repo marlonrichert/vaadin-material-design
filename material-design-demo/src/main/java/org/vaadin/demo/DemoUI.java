@@ -8,10 +8,11 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Alignment;
+import com.vaadin.ui.NativeButton;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
 
-@Theme("demo")
+@Theme("material-design")
 @Title("Material Design for Vaadin 7 demo")
 @SuppressWarnings("serial")
 public class DemoUI extends UI
@@ -24,5 +25,6 @@ public class DemoUI extends UI
 
     @Override
     protected void init(VaadinRequest request) {
+        setContent(new NativeButton("Hello world!"));
     }
 }

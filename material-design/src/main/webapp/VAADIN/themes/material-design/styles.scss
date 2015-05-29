@@ -1,0 +1,24 @@
+@import "modules/color-constants";
+
+$md-color-app-bar: $md-COLOR-APP-BAR-LIGHT !default;
+$md-color-background: $md-COLOR-BACKGROUND-LIGHT !default;
+$md-color-cards: $md-COLOR-CARDS-LIGHT !default;
+
+$md-component-grid: 8px;
+
+.material-design {
+
+  &.v-app {
+    height: 100%;
+    background: $md-color-background;
+  }
+
+  &.v-overlay-container {
+    position: absolute;
+    top: 0;
+  }
+
+  .v-loading-indicator {
+    height: $md-component-grid;
+  }
+}

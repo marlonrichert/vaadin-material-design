@@ -6,7 +6,7 @@
 	<artifactId>material-design-root</artifactId>
 	<packaging>pom</packaging>
 	<version>0.1-SNAPSHOT</version>
-	<name>MyComponent Add-on Root Project</name>
+	<name>Material Design for Vaadin 7 root project</name>
 
 	<modules>
 		<module>material-design</module>
