@@ -8,6 +8,7 @@ $md-color_component: white !default;
 $md-size_component-grid: 8px !default;
 
 $md-shadow_z1: 0 1px 4px 0 rgba(0, 0, 0, 0.37) !default;
+$md-shadow_z2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3); !default;
 
 @mixin box-shadow($value) {
   -webkit-box-shadow: $value;
@@ -73,5 +74,6 @@ $md-shadow_z1: 0 1px 4px 0 rgba(0, 0, 0, 0.37) !default;
     height: 7 * $md-size_component-grid;
 
     background: $md-color_primary;
+    @include box-shadow($md-shadow_z2);
   }
 }

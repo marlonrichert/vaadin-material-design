@@ -31,8 +31,8 @@ public class DemoUI extends UI {
                     {
                         addComponent(new Actions() {
                             {
-                                addComponent(new FlatButton("Disagree"));
-                                addComponent(new FlatButton("Agree"));
+                                addComponent(new FlatButton("Action 1"));
+                                addComponent(new FlatButton("Action 2"));
                             }
                         });
                     }
