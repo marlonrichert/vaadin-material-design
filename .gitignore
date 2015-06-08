@@ -1,4 +1,4 @@
 target/
 widgetsets/
 *.cache
-material-design/src/main/webapp/VAADIN/themes/material-design/styles.css
+styles.css

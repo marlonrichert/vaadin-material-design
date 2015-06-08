@@ -1,0 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,300,400);
+@import url(http://fonts.googleapis.com/css?family=Material+Icons);
+
+@import "../material-design/material-design";
+
+$md-color_primary: #212121 !default;
+$md-color_accent: #448AFF !default;
+
+$md-color_background: #303030 !default;
+$md-color_component: #424242 !default;
+$md-color_primary-text: rgba(255, 255, 255, 1) !default;
+$md-color_icons: rgba(255, 255, 255, 1) !default;
+
+.md-dark {
+  @include material-design;
+}

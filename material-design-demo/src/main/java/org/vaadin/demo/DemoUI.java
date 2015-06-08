@@ -10,7 +10,7 @@ import org.vaadin.materialdesign.MaterialDesign;
 
 import javax.servlet.annotation.WebServlet;
 
-@Theme("material-design")
+@Theme("md-light")
 @Title("Material Design for Vaadin 7 demo")
 @SuppressWarnings("serial")
 public class DemoUI extends UI {
