@@ -1,11 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:500,300,400);
 
-$md-color_primary: #E0E0E0 _!default;
+$md-color_primary: #E0E0E0 !default;
 $md-color_accent: #448AFF !default;
-$md-color_component: white !default;
 $md-color_background: #FAFAFA !default;
+$md-color_component: white !default;
 
 $md-size_component-grid: 8px !default;
+
+$md-shadow_z1: 0 1px 4px 0 rgba(0, 0, 0, 0.37) !default;
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
 
 @mixin box-sizing($value) {
   -webkit-box-sizing: $value;
@@ -17,6 +25,7 @@ $md-size_component-grid: 8px !default;
 
   &.v-app {
     height: 100%;
+
     background: $md-color_background;
     font-family: Roboto, sans-serif;
     font-size: 13px;
@@ -31,6 +40,11 @@ $md-size_component-grid: 8px !default;
     height: $md-size_component-grid;
   }
 
+  .v-horizontallayout > .v-slot {
+    display: inline-block;
+  }
+
+  .md-button,
   button {
     @include box-sizing(border-box);
     margin: 0 $md-size_component-grid;
@@ -42,5 +56,22 @@ $md-size_component-grid: 8px !default;
     background: $md-color_component;
     font-size: 14px;
     text-transform: uppercase;
+  }
+
+  .md-flat-button {
+    color: $md-color_accent;
+  }
+
+  .md-card {
+    margin: $md-size_component-grid;
+
+    background: $md-color_component;
+    @include box-shadow($md-shadow_z1);
+  }
+
+  .md-toolbar {
+    height: 7 * $md-size_component-grid;
+
+    background: $md-color_primary;
   }
 }
