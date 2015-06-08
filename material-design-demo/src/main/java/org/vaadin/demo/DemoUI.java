@@ -5,10 +5,7 @@ import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
-import com.vaadin.ui.HorizontalLayout;
-import com.vaadin.ui.NativeButton;
-import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.*;
 import org.vaadin.materialdesign.MaterialDesign;
 
 import javax.servlet.annotation.WebServlet;
@@ -27,6 +24,7 @@ public class DemoUI extends UI {
         setContent(new VerticalLayout() {
             {
                 addComponent(new Toolbar());
+                addComponent(new Search());
                 addComponent(new Card() {
                     {
                         addComponent(new Actions() {
@@ -39,6 +37,21 @@ public class DemoUI extends UI {
                 });
             }
         });
+    }
+
+    private class Search extends HorizontalLayout {
+        public Search() {
+            addStyleName(MaterialDesign.SEARCH);
+            addComponent(new Icon("search"));
+            addComponent(new TextField());
+        }
+    }
+
+    private class Icon extends Label {
+        public Icon(String content) {
+            super(content);
+            addStyleName(MaterialDesign.ICON);
+        }
     }
 
     private class Toolbar extends HorizontalLayout {
