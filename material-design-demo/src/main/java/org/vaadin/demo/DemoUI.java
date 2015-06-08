@@ -43,7 +43,14 @@ public class DemoUI extends UI {
         public Search() {
             addStyleName(MaterialDesign.SEARCH);
             addComponent(new Icon("search"));
-            addComponent(new TextField());
+            addComponent(new SearchTextField());
+        }
+    }
+
+    private class SearchTextField extends TextField {
+        public SearchTextField() {
+            addStyleName("md-search-text-field");
+            setInputPrompt("Search");
         }
     }
 

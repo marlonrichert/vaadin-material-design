@@ -9,6 +9,15 @@ $md-color_component: white !default;
 $md-color_primary-text: rgba(0, 0, 0, .87);
 $md-color_icons: rgba(0, 0, 0, .54);
 
+$md-font-family: Roboto, sans-serif;
+$md-font-size_body1-desktop: 13px;
+$md-font-size_body1-device: 14px;
+$md-font-size_subhead-desktop: 15px;
+$md-font-size_subhead-device: 16x;
+
+$md-font-size_title: 20px;
+$md-font-weight_title: bolder;
+
 $md-size_component-grid: 8px !default;
 $md-border-radius: 2px;
 
@@ -29,6 +38,20 @@ $md-shadow_z2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3) !
 
 .material-design {
 
+  input,
+  textarea,
+  keygen,
+  select,
+  button {
+    color: $md-color_primary-text;
+    font-family: $md-font-family;
+    font-size: $md-font-size_body1-desktop;
+  }
+
+  :focus {
+    outline: none;
+  }
+
   .material-icons {
     color: $md-color_icons;
   }
@@ -37,9 +60,6 @@ $md-shadow_z2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3) !
     height: 100%;
 
     background: $md-color_background;
-    color: $md-color_primary-text;
-    font-family: Roboto, sans-serif;
-    font-size: 13px;
   }
 
   &.v-overlay-container {
@@ -80,13 +100,36 @@ $md-shadow_z2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3) !
     @include box-shadow($md-shadow_z1);
   }
 
-  .md-card,
-  .md-search {
+  .md-card {
     margin: $md-size_component-grid;
 
     background: $md-color_component;
     border-radius: $md-border-radius;
     @include box-shadow($md-shadow_z1);
+  }
+
+  .md-search {
+    @extend .md-card;
+    font-size: $md-font-size_title;
+    font-weight: $md-font-weight_title;
+  }
+
+  .md-text-field,
+  input[type="text"] {
+    @include box-sizing(border-box);
+    height: 6 * $md-size_component-grid;
+    border: none;
+    padding: (2 * $md-size_component-grid) 0;
+
+    font-size: $md-font-size_subhead-desktop;
+  }
+
+  .md-search-text-field,
+  input[type="search"],
+  input[type="text"].md-search-text-field {
+    @extend .md-text-field;
+    font-size: $md-font-size_title;
+    font-weight: $md-font-weight_title;
   }
 
   .md-toolbar {
