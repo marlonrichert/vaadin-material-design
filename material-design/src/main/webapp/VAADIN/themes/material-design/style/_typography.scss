@@ -1,0 +1,6 @@
+@import "../util/defaults";
+
+@mixin title-type {
+  font-size: $md-font-size_title;
+  font-weight: $md-font-weight_title;
+}

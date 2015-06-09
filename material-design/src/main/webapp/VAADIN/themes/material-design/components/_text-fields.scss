@@ -7,7 +7,7 @@
   .md-text-field,
   input[type="text"] {
     @include md-component-base($color_background, $color_font,
-    $font-size: $md-font-size_subhead-desktop);
+    $font-size: $md-font-size_subhead);
 
     @include box-sizing(border-box);
     height: 6 * $md-size_component-grid;

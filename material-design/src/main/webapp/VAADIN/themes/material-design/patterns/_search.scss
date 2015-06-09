@@ -1,15 +1,11 @@
 @mixin md-search {
   .md-search {
     @extend .md-card;
-    font-size: $md-font-size_title;
-    font-weight: $md-font-weight_title;
   }
 
   .md-search-text-field,
   input[type="search"],
   input.md-search-text-field {
     @extend .md-text-field;
-    font-size: $md-font-size_title;
-    font-weight: $md-font-weight_title;
   }
 }

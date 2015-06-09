@@ -3,6 +3,7 @@
 @import "components/text-fields";
 @import "components/toolbars";
 @import "patterns/search";
+@import "util/defaults";
 
 @mixin material-design($color_primary, $color_accent, $color_app,
     $color_components, $color_primary-text, $color_icons) {
@@ -13,6 +14,11 @@
 
   .material-icons {
     color: $color_icons;
+    width: $md-size_icon-tile;
+    height: $md-size_icon-tile;
+    line-height: $md-size_icon-tile;
+    text-align: center;
+    vertical-align: middle;
   }
 
   &.v-app {
