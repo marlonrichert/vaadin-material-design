@@ -1,12 +1,20 @@
+@import "components/base";
 @import "components/buttons";
 @import "components/cards";
 @import "components/text-fields";
 @import "components/toolbars";
 @import "patterns/search";
+@import "structure/app-bar";
 @import "util/defaults";
 
-@mixin material-design($color_primary, $color_accent, $color_app,
-    $color_components, $color_primary-text, $color_icons) {
+@mixin material-design(
+    $color_primary,
+    $color_accent,
+    $color_app,
+    $color_components,
+    $color_primary-text,
+    $color_hint-text,
+    $color_icons) {
 
   :focus {
     outline: none;
@@ -40,24 +48,21 @@
     display: inline-block;
   }
 
-  @include md-buttons(
+  @include md-base-component(
   $color_background: $color_components,
-  $color_font: $color_primary-text,
+  $color_font: $color_primary-text);
+
+  @include md-buttons(
   $color_accent: $color_accent);
 
-  @include md-cards(
-  $color_background: $color_components,
-  $color_font: $color_primary-text);
+  @include md-cards();
 
   @include md-text-fields(
-  $color_background: $color_components,
-  $color_font: $color_primary-text);
+  $color_hint-text: $color_hint-text);
 
-  @include md-toolbars(
-  $color_background: $color_components,
-  $color_font: $color_primary-text);
+  @include md-toolbars();
 
-  @include md-search(
-  $color_background: $color_components,
-  $color_font: $color_primary-text);
+  @include md-search();
+
+  @include md-app-bar($color_primary);
 }

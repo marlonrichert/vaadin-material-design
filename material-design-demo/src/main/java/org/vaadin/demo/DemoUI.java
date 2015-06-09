@@ -29,8 +29,12 @@ public class DemoUI extends UI {
                     {
                         addComponent(new Actions() {
                             {
-                                addComponent(new FlatButton("Action 1"));
-                                addComponent(new FlatButton("Action 2"));
+                                addComponent(new NativeButton("Action 1") {{
+                                    addStyleName(MaterialDesign.StyleNames.FLAT_BUTTON);
+                                }});
+                                addComponent(new Button("Action 2") {{
+                                    addStyleName(MaterialDesign.StyleNames.FLAT_BUTTON);
+                                }});
                             }
                         });
                     }
@@ -41,7 +45,7 @@ public class DemoUI extends UI {
 
     private class Search extends HorizontalLayout {
         public Search() {
-            addStyleName(MaterialDesign.SEARCH);
+            setId(MaterialDesign.Ids.SEARCH);
             addComponent(new Icon("search"));
             addComponent(new SearchTextField());
         }
@@ -57,33 +61,26 @@ public class DemoUI extends UI {
     private class Icon extends Label {
         public Icon(String content) {
             super(content);
-            addStyleName(MaterialDesign.ICON);
+            addStyleName(MaterialDesign.StyleNames.ICON);
         }
     }
 
     private class Toolbar extends HorizontalLayout {
         public Toolbar() {
-            addStyleName(MaterialDesign.TOOLBAR);
+            addStyleName(MaterialDesign.StyleNames.TOOLBAR);
         }
     }
 
     private class Card extends VerticalLayout {
         public Card() {
-            addStyleName(MaterialDesign.CARD);
+            addStyleName(MaterialDesign.StyleNames.CARD);
             setSizeUndefined();
         }
     }
 
     private class Actions extends HorizontalLayout {
         public Actions() {
-            addStyleName(MaterialDesign.ACTIONS);
-        }
-    }
-
-    private class FlatButton extends NativeButton {
-        public FlatButton(String caption) {
-            super(caption);
-            addStyleName(MaterialDesign.FLAT_BUTTON);
+            addStyleName(MaterialDesign.StyleNames.ACTIONS);
         }
     }
 }

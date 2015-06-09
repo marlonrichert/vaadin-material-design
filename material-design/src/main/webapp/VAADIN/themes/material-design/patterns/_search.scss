@@ -1,11 +1,10 @@
 @mixin md-search {
-  .md-search {
+  #md-search {
     @extend .md-card;
   }
 
-  .md-search-text-field,
-  input[type="search"],
-  input.md-search-text-field {
+  #md-search-text-field,
+  input[type="search"] {
     @extend .md-text-field;
   }
 }

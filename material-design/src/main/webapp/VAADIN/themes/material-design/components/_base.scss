@@ -1,10 +1,12 @@
 @import "../util/defaults";
 
-@mixin md-component-base($color_background, $color_font,
+@mixin md-base-component($color_background, $color_font,
     $font-size: $md-font-size_body1) {
 
-  background: $color_background;
-  color: $color_font;
-  font-family: $md-font-family;
-  font-size: $font-size;
+  %md-base-component {
+    background: $color_background;
+    color: $color_font;
+    font-family: $md-font-family;
+    font-size: $font-size;
+  }
 }

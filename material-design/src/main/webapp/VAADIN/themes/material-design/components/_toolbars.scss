@@ -1,9 +1,10 @@
+@import "../util/box-shadow";
 @import "base";
 
-@mixin md-toolbars($color_background, $color_font) {
+@mixin md-toolbars() {
 
   .md-toolbar {
-    @include md-component-base($color_background, $color_font);
+    @extend %md-base-component;
 
     height: 7 * $md-size_component-grid;
 

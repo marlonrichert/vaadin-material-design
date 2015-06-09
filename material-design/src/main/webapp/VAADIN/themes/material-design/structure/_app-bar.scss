@@ -1,0 +1,7 @@
+@mixin md-app-bar($color_background) {
+  #md-app-bar {
+    @extend .md-toolbar;
+
+    background: $color_background;
+  }
+}

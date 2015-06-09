@@ -2,16 +2,21 @@
 @import "../util/defaults";
 @import "base";
 
-@mixin md-text-fields($color_background, $color_font) {
+@mixin md-text-fields($color_hint-text) {
 
   .md-text-field,
+  .v-textfield,
   input[type="text"] {
-    @include md-component-base($color_background, $color_font,
-    $font-size: $md-font-size_subhead);
+    @extend %md-base-component;
+    font-size: $md-font-size_subhead;
 
     @include box-sizing(border-box);
     height: 6 * $md-size_component-grid;
     border: none;
     padding: (2 * $md-size_component-grid) 0;
+  }
+
+  .v-textfield-prompt {
+    color: $color_hint-text;
   }
 }

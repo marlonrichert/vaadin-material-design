@@ -3,12 +3,12 @@
 @import "../util/defaults";
 @import "base";
 
-@mixin md-buttons($color_background, $color_font, $color_accent) {
+@mixin md-buttons($color_accent) {
 
   .md-button,
   button {
-    @include md-component-base($color_background, $color_font,
-    $font-size: $md-font-size_button);
+    @extend %md-base-component;
+    font-size: $md-font-size_button;
 
     @include box-sizing(border-box);
     margin: 0 $md-size_component-grid;
