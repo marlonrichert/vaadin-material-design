@@ -1,0 +1,17 @@
+@import "../util/box-sizing";
+@import "../util/defaults";
+@import "base";
+
+@mixin md-text-fields($color_background, $color_font) {
+
+  .md-text-field,
+  input[type="text"] {
+    @include md-component-base($color_background, $color_font,
+    $font-size: $md-font-size_subhead-desktop);
+
+    @include box-sizing(border-box);
+    height: 6 * $md-size_component-grid;
+    border: none;
+    padding: (2 * $md-size_component-grid) 0;
+  }
+}

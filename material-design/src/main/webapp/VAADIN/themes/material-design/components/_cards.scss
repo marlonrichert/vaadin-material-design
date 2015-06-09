@@ -1,0 +1,15 @@
+@import "../util/box-shadow";
+@import "../util/defaults";
+@import "base";
+
+@mixin md-cards($color_background, $color_font) {
+
+  .md-card {
+    @include md-component-base($color_background, $color_font);
+
+    margin: $md-size_component-grid;
+
+    border-radius: $md-border-radius;
+    @include box-shadow($md-shadow_z1);
+  }
+}

@@ -1,0 +1,35 @@
+@import "../util/box-shadow";
+@import "../util/box-sizing";
+@import "../util/defaults";
+@import "base";
+
+@mixin md-buttons($color_background, $color_font, $color_accent) {
+
+  .md-button,
+  button {
+    @include md-component-base($color_background, $color_font,
+    $font-size: $md-font-size_button);
+
+    @include box-sizing(border-box);
+    margin: 0 $md-size_component-grid;
+    min-width: 8 * $md-size_component-grid;
+    height: 4.5 * $md-size_component-grid;
+    border: none;
+    padding: 0 $md-size_component-grid;
+
+    text-transform: $md-text-transform_button;
+    border-radius: $md-border-radius;
+  }
+
+  .md-flat-button {
+    @extend .md-button;
+
+    color: $color_accent;
+  }
+
+  .md-raised-button {
+    @extend .md-button;
+
+    @include box-shadow($md-shadow_z1);
+  }
+}

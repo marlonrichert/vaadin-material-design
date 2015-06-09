@@ -1,46 +1,24 @@
-@import "modules/box-shadow";
-@import "modules/box-sizing";
+@import "components/buttons";
+@import "components/cards";
+@import "components/text-fields";
+@import "components/toolbars";
+@import "patterns/search";
 
-$md-font-family: Roboto, sans-serif !default;
-$md-font-size_body1-desktop: 13px !default;
-$md-font-size_body1-device: 14px !default;
-$md-font-size_subhead-desktop: 15px !default;
-$md-font-size_subhead-device: 16x !default;
-
-$md-font-size_title: 20px !default;
-$md-font-weight_title: bolder !default;
-
-$md-size_component-grid: 8px !default;
-$md-border-radius: 2px !default;
-
-$md-shadow_z1: 0 1px 4px 0 rgba(0, 0, 0, 0.37) !default;
-$md-shadow_z2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3) !default;
-
-@mixin material-design {
-
-  input,
-  textarea,
-  keygen,
-  select,
-  button {
-    background: transparent;
-    color: $md-color_primary-text;
-    font-family: $md-font-family;
-    font-size: $md-font-size_body1-desktop;
-  }
+@mixin material-design($color_primary, $color_accent, $color_app,
+    $color_components, $color_primary-text, $color_icons) {
 
   :focus {
     outline: none;
   }
 
   .material-icons {
-    color: $md-color_icons;
+    color: $color_icons;
   }
 
   &.v-app {
     height: 100%;
 
-    background: $md-color_background;
+    background: $color_app;
   }
 
   &.v-overlay-container {
@@ -56,67 +34,24 @@ $md-shadow_z2: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3) !
     display: inline-block;
   }
 
-  .md-button,
-  button {
-    @include box-sizing(border-box);
-    margin: 0 $md-size_component-grid;
-    min-width: 8 * $md-size_component-grid;
-    height: 4.5 * $md-size_component-grid;
-    border: none;
-    padding: 0 $md-size_component-grid;
+  @include md-buttons(
+  $color_background: $color_components,
+  $color_font: $color_primary-text,
+  $color_accent: $color_accent);
 
-    background: $md-color_component;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-radius: $md-border-radius;
-  }
+  @include md-cards(
+  $color_background: $color_components,
+  $color_font: $color_primary-text);
 
-  .md-flat-button {
-    @extend .md-button;
-    color: $md-color_accent;
-  }
+  @include md-text-fields(
+  $color_background: $color_components,
+  $color_font: $color_primary-text);
 
-  .md-raised-button {
-    @extend .md-button;
-    @include box-shadow($md-shadow_z1);
-  }
+  @include md-toolbars(
+  $color_background: $color_components,
+  $color_font: $color_primary-text);
 
-  .md-card {
-    margin: $md-size_component-grid;
-
-    background: $md-color_component;
-    border-radius: $md-border-radius;
-    @include box-shadow($md-shadow_z1);
-  }
-
-  .md-search {
-    @extend .md-card;
-    font-size: $md-font-size_title;
-    font-weight: $md-font-weight_title;
-  }
-
-  .md-text-field,
-  input[type="text"] {
-    @include box-sizing(border-box);
-    height: 6 * $md-size_component-grid;
-    border: none;
-    padding: (2 * $md-size_component-grid) 0;
-
-    font-size: $md-font-size_subhead-desktop;
-  }
-
-  .md-search-text-field,
-  input[type="search"],
-  input[type="text"].md-search-text-field {
-    @extend .md-text-field;
-    font-size: $md-font-size_title;
-    font-weight: $md-font-weight_title;
-  }
-
-  .md-toolbar {
-    height: 7 * $md-size_component-grid;
-
-    background: $md-color_primary;
-    @include box-shadow($md-shadow_z2);
-  }
+  @include md-search(
+  $color_background: $color_components,
+  $color_font: $color_primary-text);
 }
