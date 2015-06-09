@@ -1,4 +1,6 @@
-@mixin md-vaadin {
+@import "defaults";
+
+@mixin md-vaadin($color_app) {
   &.v-app {
     height: 100%;
 
@@ -12,6 +14,27 @@
 
   .v-loading-indicator {
     height: $md-size_component-grid;
+  }
+
+  .v-spacing {
+    width: $md-size_component-grid;
+    height: $md-size_component-grid;
+  }
+
+  .v-margin-top {
+    padding-top: $md-size_component-grid;
+  }
+
+  .v-margin-right {
+    padding-right: $md-size_component-grid;
+  }
+
+  .v-margin-bottom {
+    padding-bottom: $md-size_component-grid;
+  }
+
+  .v-margin-left {
+    padding-left: $md-size_component-grid;
   }
 
   .v-horizontallayout > .v-slot,

@@ -1,4 +1,6 @@
-@mixin md-material-icons {
+@import "defaults";
+
+@mixin md-material-icons($color_icons) {
   .material-icons {
     color: $color_icons;
     width: $md-size_icon-tile;

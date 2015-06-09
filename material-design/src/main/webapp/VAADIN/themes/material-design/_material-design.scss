@@ -7,7 +7,7 @@
 @import "components/toolbars";
 @import "patterns/search";
 @import "structure/app-bar";
-@import "util/defaults";
+@import "base/defaults";
 
 @mixin material-design(
     $color_primary,
@@ -22,8 +22,8 @@
     outline: none;
   }
 
-  @include md-material-icons;
-  @include md-vaadin;
+  @include md-material-icons($color_icons);
+  @include md-vaadin($color_app);
 
   @include md-base-component(
   $color_background: $color_components,

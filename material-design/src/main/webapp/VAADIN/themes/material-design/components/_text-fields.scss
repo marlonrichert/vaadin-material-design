@@ -1,5 +1,5 @@
 @import "../util/box-sizing";
-@import "../util/defaults";
+@import "../base/defaults";
 @import "base-component";
 
 @mixin md-text-fields($color_hint-text) {

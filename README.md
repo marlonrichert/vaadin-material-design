@@ -46,4 +46,4 @@ To get started quickly, copy-paste the contents of md-light/styles.scss or
 md-dark/styles.scss to your own styles.scss and modify the variables.
 
 For more options, you can copy and override additional variables defined in
-material-design/util/_defaults.scss
+material-design/base/_defaults.scss
