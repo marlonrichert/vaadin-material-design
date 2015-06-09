@@ -1,7 +1,7 @@
 @import "../util/box-shadow";
 @import "../util/box-sizing";
 @import "../util/defaults";
-@import "base";
+@import "base-component";
 
 @mixin md-buttons($color_accent) {
 
@@ -10,7 +10,6 @@
     font-size: $md-font-size_button;
 
     @include box-sizing(border-box);
-    margin: 0 $md-size_component-grid;
     min-width: 8 * $md-size_component-grid;
     height: 4.5 * $md-size_component-grid;
     border: none;

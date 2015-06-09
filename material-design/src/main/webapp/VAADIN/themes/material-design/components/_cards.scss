@@ -1,6 +1,6 @@
 @import "../util/box-shadow";
 @import "../util/defaults";
-@import "base";
+@import "base-component";
 
 @mixin md-cards() {
 
@@ -11,5 +11,9 @@
 
     border-radius: $md-border-radius;
     @include box-shadow($md-shadow_z1);
+  }
+
+  .md-actions {
+
   }
 }

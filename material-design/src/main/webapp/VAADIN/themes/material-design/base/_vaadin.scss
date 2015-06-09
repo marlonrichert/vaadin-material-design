@@ -1,0 +1,21 @@
+@mixin md-vaadin {
+  &.v-app {
+    height: 100%;
+
+    background: $color_app;
+  }
+
+  &.v-overlay-container {
+    position: absolute;
+    top: 0;
+  }
+
+  .v-loading-indicator {
+    height: $md-size_component-grid;
+  }
+
+  .v-horizontallayout > .v-slot,
+  .v-horizontallayout > .v-spacing {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,10 @@
+@mixin md-material-icons {
+  .material-icons {
+    color: $color_icons;
+    width: $md-size_icon-tile;
+    height: $md-size_icon-tile;
+    line-height: $md-size_icon-tile;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

@@ -77,6 +77,8 @@ public class DemoUI extends UI {
     private class Actions extends HorizontalLayout {
         public Actions() {
             addStyleName(MaterialDesign.StyleNames.ACTIONS);
+            setMargin(true);
+            setSpacing(true);
         }
     }
 

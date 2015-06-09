@@ -1,4 +1,6 @@
-@import "components/base";
+@import "base/material-icons";
+@import "base/vaadin";
+@import "components/base-component";
 @import "components/buttons";
 @import "components/cards";
 @import "components/text-fields";
@@ -20,33 +22,8 @@
     outline: none;
   }
 
-  .material-icons {
-    color: $color_icons;
-    width: $md-size_icon-tile;
-    height: $md-size_icon-tile;
-    line-height: $md-size_icon-tile;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  &.v-app {
-    height: 100%;
-
-    background: $color_app;
-  }
-
-  &.v-overlay-container {
-    position: absolute;
-    top: 0;
-  }
-
-  .v-loading-indicator {
-    height: $md-size_component-grid;
-  }
-
-  .v-horizontallayout > .v-slot {
-    display: inline-block;
-  }
+  @include md-material-icons;
+  @include md-vaadin;
 
   @include md-base-component(
   $color_background: $color_components,
