@@ -4,8 +4,6 @@
 
 @mixin md-text-fields($color_hint-text) {
 
-  .md-text-field,
-  .v-textfield,
   input[type="text"] {
     @extend %md-base-component;
     font-size: $md-font-size_subhead;
@@ -16,7 +14,7 @@
     padding: (2 * $md-size_component-grid) 0;
   }
 
-  .v-textfield-prompt {
+  input[type="text"].v-textfield-prompt {
     color: $color_hint-text;
   }
 }
