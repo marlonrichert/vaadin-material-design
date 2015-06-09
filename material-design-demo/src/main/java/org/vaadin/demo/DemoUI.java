@@ -23,18 +23,14 @@ public class DemoUI extends UI {
     protected void init(VaadinRequest request) {
         setContent(new VerticalLayout() {
             {
-                addComponent(new Toolbar());
+                addComponent(new AppBar());
                 addComponent(new Search());
                 addComponent(new Card() {
                     {
                         addComponent(new Actions() {
                             {
-                                addComponent(new NativeButton("Action 1") {{
-                                    addStyleName(MaterialDesign.StyleNames.FLAT_BUTTON);
-                                }});
-                                addComponent(new Button("Action 2") {{
-                                    addStyleName(MaterialDesign.StyleNames.FLAT_BUTTON);
-                                }});
+                                addComponent(new FlatButton("Action 1"));
+                                addComponent(new FlatButton("Action 2"));
                             }
                         });
                     }
@@ -53,7 +49,7 @@ public class DemoUI extends UI {
 
     private class SearchTextField extends TextField {
         public SearchTextField() {
-            addStyleName("md-search-text-field");
+            addStyleName(MaterialDesign.StyleNames.SEARCH_TEXT_FIELD);
             setInputPrompt("Search");
         }
     }
@@ -65,9 +61,9 @@ public class DemoUI extends UI {
         }
     }
 
-    private class Toolbar extends HorizontalLayout {
-        public Toolbar() {
-            addStyleName(MaterialDesign.StyleNames.TOOLBAR);
+    private class AppBar extends HorizontalLayout {
+        public AppBar() {
+            setId(MaterialDesign.Ids.APP_BAR);
         }
     }
 
@@ -81,6 +77,13 @@ public class DemoUI extends UI {
     private class Actions extends HorizontalLayout {
         public Actions() {
             addStyleName(MaterialDesign.StyleNames.ACTIONS);
+        }
+    }
+
+    private class FlatButton extends NativeButton {
+        public FlatButton(String caption) {
+            super(caption);
+            addStyleName(MaterialDesign.StyleNames.FLAT);
         }
     }
 }

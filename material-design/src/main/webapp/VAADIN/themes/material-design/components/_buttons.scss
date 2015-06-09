@@ -5,7 +5,6 @@
 
 @mixin md-buttons($color_accent) {
 
-  .md-button,
   button {
     @extend %md-base-component;
     font-size: $md-font-size_button;
@@ -21,13 +20,11 @@
     border-radius: $md-border-radius;
   }
 
-  .md-flat-button {
-    @extend .md-button;
-
+  button.md-flat {
     color: $color_accent;
   }
 
-  .md-raised-button {
+  button.md-raised {
     @extend .md-button;
 
     @include box-shadow($md-shadow_z1);
