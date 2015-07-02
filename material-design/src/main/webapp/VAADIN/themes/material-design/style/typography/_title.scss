@@ -1,0 +1,8 @@
+@import "constants";
+
+@mixin md-title {
+  .md-title {
+    font-size: $md-font-size_title;
+    font-weight: $md-font-weight_title;
+  }
+}

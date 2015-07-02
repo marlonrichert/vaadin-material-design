@@ -1,0 +1,7 @@
+@import "constants";
+
+@mixin md-subtitle {
+  .md-subtitle {
+    font-size: $md-font-size_subhead;
+  }
+}

@@ -1,5 +1,5 @@
-@import "../layout/layout";
-@import "../style/style";
+@import "../layout/constants";
+@import "../style/constants";
 @import "../util/box-shadow";
 @import "base-component";
 
@@ -12,5 +12,10 @@
 
     border-radius: $md-border-radius;
     @include box-shadow($md-shadow_z1);
+  }
+
+  .md-primary-title {
+    padding: (2 * $md-size_component-grid);
+    padding-top: 3 * $md-size_component-grid;
   }
 }

@@ -1,0 +1,7 @@
+@import "app-bar";
+@import "toolbars";
+
+@mixin md-all-structure($color_app-bar-background) {
+  @include md-toolbars();
+  @include md-app-bar($color_background: $color_app-bar-background);
+}

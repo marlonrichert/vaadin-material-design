@@ -1,0 +1,21 @@
+@import "base-component";
+@import "buttons";
+@import "cards";
+@import "text-fields";
+
+@mixin md-all-components(
+  $color_background,
+  $color_font,
+  $color_accent,
+  $color_hint-text) {
+
+  @include md-base-component(
+  $color_background: $color_background,
+  $color_font: $color_font);
+
+  @include md-buttons($color_accent: $color_accent);
+
+  @include md-cards();
+
+  @include md-text-fields($color_hint-text: $color_hint-text);
+}

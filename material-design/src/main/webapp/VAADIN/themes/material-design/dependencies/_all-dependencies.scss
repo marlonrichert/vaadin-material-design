@@ -1,0 +1,10 @@
+@import "material-icons";
+@import "vaadin";
+
+@mixin md-all-dependencies(
+  $color_icons,
+  $color_app-background) {
+
+  @include md-material-icons($color_icons: $color_icons);
+  @include md-vaadin($color_app-background: $color_app-background);
+}

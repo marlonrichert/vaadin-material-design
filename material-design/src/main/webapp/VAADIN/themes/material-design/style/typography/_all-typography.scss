@@ -1,0 +1,7 @@
+@import "subtitle";
+@import "title";
+
+@mixin md-all-typography {
+  @include md-subtitle;
+  @include md-title;
+}

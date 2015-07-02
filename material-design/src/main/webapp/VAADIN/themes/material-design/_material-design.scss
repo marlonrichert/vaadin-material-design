@@ -1,45 +1,36 @@
-@import "base/material-icons";
-@import "base/vaadin";
-@import "components/base-component";
-@import "components/buttons";
-@import "components/cards";
-@import "components/text-fields";
-@import "layout/structure/toolbars";
+@import "dependencies/all-dependencies";
+@import "style/typography/all-typography";
+@import "layout/structure/all-structure";
+@import "components/all-components";
 @import "patterns/search";
-@import "layout/structure/app-bar";
-@import "layout/layout";
 
 @mixin material-design(
-    $color_primary,
-    $color_accent,
-    $color_app,
-    $color_components,
-    $color_primary-text,
-    $color_hint-text,
-    $color_icons) {
+  $color_primary,
+  $color_accent,
+  $color_background,
+  $color_components,
+  $color_primary-text,
+  $color_hint-text,
+  $color_icons) {
+
+  @include md-all-dependencies(
+  $color_icons: $color_icons,
+  $color_app-background: $color_background);
+
+  @include md-all-typography();
+
+  @include md-all-structure(
+  $color_app-bar-background: $color_primary);
+
+  @include md-all-components(
+  $color_background: $color_components,
+  $color_font: $color_primary-text,
+  $color_accent: $color_accent,
+  $color_hint-text: $color_hint-text);
+
+  @include md-search();
 
   :focus {
     outline: none;
   }
-
-  @include md-material-icons($color_icons);
-  @include md-vaadin($color_app);
-
-  @include md-base-component(
-  $color_background: $color_components,
-  $color_font: $color_primary-text);
-
-  @include md-buttons(
-  $color_accent: $color_accent);
-
-  @include md-cards();
-
-  @include md-text-fields(
-  $color_hint-text: $color_hint-text);
-
-  @include md-toolbars();
-
-  @include md-search();
-
-  @include md-app-bar($color_primary);
 }

@@ -1,5 +1,5 @@
-@import "../layout/layout";
-@import "../style/typography";
+@import "../layout/constants";
+@import "../style/typography/constants";
 
 @mixin md-base-component($color_background, $color_font,
     $font-size: $md-font-size_body1) {

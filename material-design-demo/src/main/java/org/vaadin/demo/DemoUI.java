@@ -91,6 +91,7 @@ public class DemoUI extends UI {
     private class PrimaryTitle extends VerticalLayout {
         public PrimaryTitle() {
             addStyleName(MaterialDesign.StyleNames.PRIMARY_TITLE_BLOCK);
+            setMargin(true);
         }
     }
 
