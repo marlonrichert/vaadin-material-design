@@ -1,5 +1,6 @@
+@import "../layout/layout";
+@import "../style/style";
 @import "../util/box-shadow";
-@import "../base/defaults";
 @import "base-component";
 
 @mixin md-cards() {

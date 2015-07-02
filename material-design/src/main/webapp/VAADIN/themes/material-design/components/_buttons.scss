@@ -1,6 +1,7 @@
+@import "../layout/layout";
+@import "../style/style";
 @import "../util/box-shadow";
 @import "../util/box-sizing";
-@import "../base/defaults";
 @import "base-component";
 
 @mixin md-buttons($color_accent) {

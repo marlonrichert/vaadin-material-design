@@ -1,5 +1,6 @@
-@import "../util/box-shadow";
-@import "base-component";
+@import "../../components/base-component";
+@import "../../style/style";
+@import "../../util/box-shadow";
 
 @mixin md-toolbars() {
 

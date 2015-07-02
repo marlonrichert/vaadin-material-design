@@ -1,7 +1,6 @@
 package org.vaadin.demo;
 
 import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
@@ -11,7 +10,7 @@ import org.vaadin.materialdesign.MaterialDesign;
 import javax.servlet.annotation.WebServlet;
 
 @Theme("md-light")
-@Title("Material Design for Vaadin 7 demo")
+@com.vaadin.annotations.Title("Material Design for Vaadin 7 demo")
 @SuppressWarnings("serial")
 public class DemoUI extends UI {
     @WebServlet(value = "/*", asyncSupported = true)
@@ -25,16 +24,16 @@ public class DemoUI extends UI {
             {
                 addComponent(new AppBar());
                 addComponent(new Search());
-                addComponent(new Card() {
-                    {
-                        addComponent(new Actions() {
-                            {
-                                addComponent(new FlatButton("Action 1"));
-                                addComponent(new FlatButton("Action 2"));
-                            }
-                        });
-                    }
-                });
+                addComponent(new Card() {{
+                    addComponent(new PrimaryTitle() {{
+                        addComponent(new Title("Title"));
+                        addComponent(new Subtitle("Subtitle"));
+                    }});
+                    addComponent(new Actions() {{
+                        addComponent(new FlatButton("Action 1"));
+                        addComponent(new FlatButton("Action 2"));
+                    }});
+                }});
             }
         });
     }
@@ -76,7 +75,7 @@ public class DemoUI extends UI {
 
     private class Actions extends HorizontalLayout {
         public Actions() {
-            addStyleName(MaterialDesign.StyleNames.ACTIONS);
+            addStyleName(MaterialDesign.StyleNames.ACTIONS_BLOCK);
             setMargin(true);
             setSpacing(true);
         }
@@ -86,6 +85,28 @@ public class DemoUI extends UI {
         public FlatButton(String caption) {
             super(caption);
             addStyleName(MaterialDesign.StyleNames.FLAT);
+        }
+    }
+
+    private class PrimaryTitle extends VerticalLayout {
+        public PrimaryTitle() {
+            addStyleName(MaterialDesign.StyleNames.PRIMARY_TITLE_BLOCK);
+        }
+    }
+
+    private class Title extends Label {
+        public Title(String title) {
+            super(title);
+            addStyleName(MaterialDesign.StyleNames.TITLE);
+
+        }
+    }
+
+    private class Subtitle extends Label {
+        public Subtitle(String subtitle) {
+            super(subtitle);
+            addStyleName(MaterialDesign.StyleNames.SUBTITLE);
+
         }
     }
 }

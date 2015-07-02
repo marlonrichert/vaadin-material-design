@@ -4,10 +4,10 @@
 @import "components/buttons";
 @import "components/cards";
 @import "components/text-fields";
-@import "components/toolbars";
+@import "layout/structure/toolbars";
 @import "patterns/search";
-@import "structure/app-bar";
-@import "base/defaults";
+@import "layout/structure/app-bar";
+@import "layout/layout";
 
 @mixin material-design(
     $color_primary,

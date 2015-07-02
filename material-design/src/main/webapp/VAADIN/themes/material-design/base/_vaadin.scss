@@ -1,4 +1,4 @@
-@import "defaults";
+@import "../layout/layout";
 
 @mixin md-vaadin($color_app) {
   &.v-app {
