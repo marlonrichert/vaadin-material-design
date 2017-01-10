@@ -11,8 +11,8 @@ instructions, download and reviews, go to http://vaadin
 ## Building and running demo
 
     git clone https://github.com/marlonrichert/vaadin-material-design
-    mvn clean install
     cd material-design-demo
+    mvn clean install
     mvn jetty:run
 
 To see the demo, navigate to http://localhost:8080/
